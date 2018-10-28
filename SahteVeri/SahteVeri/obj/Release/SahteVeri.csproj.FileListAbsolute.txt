@@ -1,0 +1,8 @@
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\bin\Release\SahteVeri.dll
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\bin\Release\SahteVeri.pdb
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\obj\Release\SahteVeri.csprojAssemblyReference.cache
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\obj\Release\SahteVeri.Properties.Resources.resources
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\obj\Release\SahteVeri.csproj.GenerateResource.cache
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\obj\Release\SahteVeri.csproj.CoreCompileInputs.cache
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\obj\Release\SahteVeri.dll
+C:\Users\Berke\source\repos\SahteVeri\SahteVeri\SahteVeri\obj\Release\SahteVeri.pdb

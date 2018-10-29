@@ -116,6 +116,7 @@ namespace SahteVeri
             y = rnd.Next(0, 100);
             d = y.ToString();
             this.ceptelefon = a + b + " " + c + " " + d;
+            
             return this.ceptelefon;
         }
 
@@ -163,19 +164,14 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirMail()
         {
+            string[] mailProviderlar = {"hotmail.com","gmail.com","yandex.com","yahoo.com.tr"};
+            string ayrac = (rnd.Next(2)==0) ? "-" : "_";
+            
             int i = rnd.Next(0,10);
             this.isim = this.isim.Replace(" ", "");
             this.soyisim = this.soyisim.Replace(" ", "");
-            if (i == 0) { this.mail = this.isim + "_" + this.soyisim + "@hotmail.com"; }
-            else if (i == 1) { this.mail = this.isim + "_" + this.soyisim + "@hotmail.com"; }
-            else if (i == 2) { this.mail = this.isim + "-" + this.soyisim + "@hotmail.com"; }
-            else if (i == 3) { this.mail = this.isim + "-" + this.soyisim + "@hotmail.com"; }
-            else if (i == 4) { this.mail = this.isim + "_" + this.soyisim + "@gmail.com"; }
-            else if (i == 5) { this.mail = this.isim + "_" + this.soyisim + "@gmail.com"; }
-            else if (i == 6) { this.mail = this.isim + "-" + this.soyisim + "@gmail.com"; }
-            else if (i == 7) { this.mail = this.isim + "-" + this.soyisim + "@gmail.com"; }
-            else if (i == 8) { this.mail = this.isim + "_" + this.soyisim + "@yandex.com"; }
-            else if (i == 9) { this.mail = this.isim + "_" + this.soyisim + "@yandex.com"; }
+            
+            this.mail = this.isim+ayrac+this.soyisim+"@"+mailProviderlar[rnd.Next(mailProviderlar.Length)];
             return this.mail.ToLower();
         }
 
@@ -344,9 +340,9 @@ namespace SahteVeri
         public int getirMaas()
         {
             int i = rnd.Next(0, 6);
-            if (i == 0 || i == 1 || i==2) { maas = rnd.Next(940, 3000); }
-            else if (i == 3 || i==4) { maas = rnd.Next(3000, 6000); }
-            else if (i == 5) { maas = rnd.Next(6000, 12000); }
+            if (i <3) { maas = rnd.Next(940, 3000); }
+            else if (i <5) { maas = rnd.Next(3000, 6000); }
+            else { maas = rnd.Next(6000, 12000); }
             return maas;
         }
 
@@ -386,15 +382,10 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirKanGrubu()
         {
-            int i = rnd.Next(0, 8);
-            if (i == 0) { kangrubu = "A+"; }
-            else if (i == 1) { kangrubu = "B+"; }
-            else if (i == 2) { kangrubu = "AB+"; }
-            else if (i == 3) { kangrubu = "0+"; }
-            else if (i == 4) { kangrubu = "A-"; }
-            else if (i == 5) { kangrubu = "B-"; }
-            else if (i == 6) { kangrubu = "AB-"; }
-            else if (i == 7) { kangrubu = "0-"; }
+            string[] kanGruplari = {"A","B","AB","0"};
+            string negatifPozitif = (rnd.Next(2)==0) ? "+" : "-";
+            
+            kangrubu = kanGruplari[rnd.Next(kanGruplari.Length)]+negatifPozitif;
             return kangrubu;
         }
 
@@ -404,10 +395,7 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirMedeniDurum()
         {
-            int i = rnd.Next(0, 3);
-            if (i == 0) { medeniDurum = "Bekar"; }
-            else if (i == 1) { medeniDurum = "Evli"; }
-            else if (i == 2) { medeniDurum = "Evli"; }
+            medeniDurum = (rnd.Next(0, 3) == 0) ? "Bekar":"Evli"; 
             return medeniDurum;
         }
 
@@ -444,19 +432,9 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirRenk()
         {
-            int i = rnd.Next(0, 11);
-            if (i == 0) { renk = "Beyaz"; }
-            else if (i == 1) { renk = "Siyah"; }
-            else if (i == 2) { renk = "Sarı"; }
-            else if (i == 3) { renk = "Mavi"; }
-            else if (i == 4) { renk = "Kırmızı"; }
-            else if (i == 5) { renk = "Yeşil"; }
-            else if (i == 6) { renk = "Gri"; }
-            else if (i == 7) { renk = "Lacivert"; }
-            else if (i == 8) { renk = "Turuncu"; }
-            else if (i == 9) { renk = "Siyah"; }
-            else if (i == 10) { renk = "Mor"; }
-            return renk;
+            string[] renkler = {"Beyaz","Siyah","Sarı","Mavi","Kırmızı","Yeşil","Gri","Lacivert","Turuncu","Siyah","Mor"};
+            this.renk = renkler[rnd.Next(renkler.Length)];
+            return this.renk;
         }
 
         /// <summary>
@@ -465,10 +443,9 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirKrediKartTipi()
         {
-            int i = rnd.Next(0, 2);
-            if (i == 0) { kredikarttipi = "Mastercard"; }
-            else if (i == 1) { kredikarttipi = "Visa"; }
-            return kredikarttipi;
+            string[] krediKartlari = {"MasterCard","Maestro","Visa"};
+            this.kredikarttipi = krediKartlari[rnd.Next(krediKartlari.Length)];
+            return this.kredikarttipi;
         }
 
         /// <summary>
@@ -477,11 +454,12 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirKrediKartNumara()
         {
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < 16; i++)
             {
-                int sayi = rnd.Next(0, 10);
-                kredikartnumara += sayi.ToString();
+                sb.Append(rnd.Next(0, 10).ToString();
             }
+            kredikartnumara = sb.ToString();
             return kredikartnumara;
         }
 
@@ -503,8 +481,7 @@ namespace SahteVeri
         /// <returns></returns>
         public string getirKrediKartCvc2()
         {
-            int i = rnd.Next(100, 1000);
-            kredikartcvc2 = i.ToString();
+            kredikartcvc2 = rnd.Next(100, 1000).ToString();
             return kredikartcvc2;
         }
 
@@ -526,9 +503,8 @@ namespace SahteVeri
         public float getirKrediKartiBorc()
         {
             int i = rnd.Next(0, 2);
-            if (i == 0) { kredikartborc = 0; }
-            else if (i == 1) { kredikartborc = rnd.Next(100,5000); }
-            return kredikartborc;
+            this.kredikartborc = (i==0) ? 0 : rnd.Next(100,5000);
+            return this.kredikartborc;
         }
 
     }

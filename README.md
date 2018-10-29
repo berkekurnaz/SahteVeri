@@ -1,26 +1,26 @@
 # Sahte Veri
-Sahte Veri C# Dili İle Hazırlanmış Bir Kütüphanedir.</br>
-Sahte Veri İle Rastgele İsim,Soyisim,Adres Gibi Birçok Bilgiyi Kolayca Üretebilirsiniz.</br>
+Sahte Veri C# dili ile hazırlanmış bir kütüphanedir.</br>
+Sahte Veri ile rastgele ve Türkçe isim, soyisim, adres gibi birçok veriyi kolayca üretebilirsiniz.</br>
 
 ## Kurulum
 
-Nuget Paket Yöneticisi Kullanarak SahteVeri.dll Dosyasını İndirebilirsiniz.</br>
-Package Console Manager Aracılığıyla Yükleme Yapmak İsterseniz Komut</br>
+Nuget Paket Yöneticisi kullanarak SahteVeri.dll dosyasını indirebilirsiniz.</br>
+Package Console Manager aracılığıyla yükleme yapmak isterseniz aşağıdaki komutu kullanın:</br>
 
 ```
 Install-Package SahteVeri -Version 1.0.0
 ```
 
 ## Kullanım
-Öncelikle Sahte Veri Kütüphanesini Ekleyelim</br>
+Öncelikle Sahte Veri kütüphanesini ekleyelim</br>
 ```
 using SahteVeri;
 ```
-Ardından Sahte Veri Getir Sınıfından Oluşturalım</br>
+Ardından Sahte Veri getir sınıfından oluşturalım</br>
 ```
 SahteVeriGetir veri = new SahteVeriGetir();
 ```
-Örnek Bir Kullanım Yaparak Rastgele İsim Ve Soyisim Oluşturalım</br>
+Örneğin getirTamIsim() fonksiyonunu kullanıp isim ve soyisim çağırabilirsiniz.</br>
 ```
 SahteVeriGetir veri = new SahteVeriGetir();
 string isim = veri.getirTamIsim();

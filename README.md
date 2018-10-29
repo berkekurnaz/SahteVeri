@@ -1,34 +1,34 @@
 # Sahte Veri
-Sahte Veri C# Dili İle Hazırlanmış Bir Kütüphanedir.</br>
-Sahte Veri İle Rastgele İsim,Soyisim,Adres Gibi Birçok Bilgiyi Kolayca Üretebilirsiniz.</br>
+Sahte Veri C# Dili Ä°le HazÄ±rlanmÄ±ÅŸ Bir KÃ¼tÃ¼phanedir.</br>
+Sahte Veri Ä°le Rastgele Ä°sim,Soyisim,Adres Gibi BirÃ§ok Bilgiyi Kolayca Ãœretebilirsiniz.</br>
 
 ## Kurulum
 
-Nuget Paket Yöneticisi Kullanarak SahteVeri.dll Dosyasını İndirebilirsiniz.</br>
-Package Console Manager Aracılığıyla Yükleme Yapmak İsterseniz Komut</br>
+Nuget Paket YÃ¶neticisi Kullanarak SahteVeri.dll DosyasÄ±nÄ± Ä°ndirebilirsiniz.</br>
+Package Console Manager AracÄ±lÄ±ÄŸÄ±yla YÃ¼kleme Yapmak Ä°sterseniz Komut</br>
 
 ```
 Install-Package SahteVeri -Version 1.0.0
 ```
 
-## Kullanım
-Öncelikle Sahte Veri Kütüphanesini Ekleyelim</br>
+## KullanÄ±m
+Ã–ncelikle Sahte Veri KÃ¼tÃ¼phanesini Ekleyelim</br>
 ```
 using SahteVeri;
 ```
-Ardından Sahte Veri Getir Sınıfından Oluşturalım</br>
+ArdÄ±ndan Sahte Veri Getir SÄ±nÄ±fÄ±ndan OluÅŸturalÄ±m</br>
 ```
 SahteVeriGetir veri = new SahteVeriGetir();
 ```
-Örnek Bir Kullanım Yaparak Rastgele İsim Ve Soyisim Oluşturalım</br>
+Ã–rnek Bir KullanÄ±m Yaparak Rastgele Ä°sim Ve Soyisim OluÅŸturalÄ±m</br>
 ```
 SahteVeriGetir veri = new SahteVeriGetir();
 string isim = veri.getirTamIsim();
-Console.WriteLine("Oluşturulan İsim: " + isim);
+Console.WriteLine("OluÅŸturulan Ä°sim: " + isim);
 ```
 
 ## Fonksiyonlar Listesi
-İsimler</br>
+Ä°simler</br>
 ```
 getirIsim()
 getirSoyisim()
@@ -36,7 +36,7 @@ getirTamIsim()
 getirKisi()
 ```
 
-İletişim</br>
+Ä°letiÅŸim</br>
 ```
 getirCepTelefon()
 getirEvTelefon()
@@ -54,7 +54,7 @@ getirTarihAy()
 getirTarihYil()
 ```
 
-Kullanıcı</br>
+KullanÄ±cÄ±</br>
 ```
 getirKullaniciAdi()
 getirSifre()
@@ -68,11 +68,11 @@ getirKanGrubu()
 getirMedeniDurum()
 ```
 
-Sayılar</br>
+SayÄ±lar</br>
 ```
 getirSayiRastgele()
-getirSayiRastgele(int bitiş)
-getirSayiRastgele(int başlangıç,int bitiş)
+getirSayiRastgele(int bitiÅŸ)
+getirSayiRastgele(int baÅŸlangÄ±Ã§,int bitiÅŸ)
 ```
 
 Renkler</br>
@@ -89,13 +89,13 @@ getirKrediKartCvc2()
 getirKrediKartBorc()
 ```
 
-İnternet</br>
+Ä°nternet</br>
 ```
 getirInternetIpAdres()
 ```
 
-## Geliştiriciler
-* **Ahmetcan Aydemir** - [Github Profili](https://github.com/ahmetcanaydemir)</br>
+## GeliÅŸtiriciler
+* **Ahmet Can Aydemir** - [Github Profili](https://github.com/ahmetcanaydemir)</br>
 * **Berke Kurnaz** - [Github Profili](https://github.com/berkekurnaz)</br>  	
 
 
